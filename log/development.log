@@ -1,0 +1,366 @@
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE DATABASE `rails_example_development` DEFAULT CHARACTER SET `utf8mb4`[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE DATABASE `rails_example_test` DEFAULT CHARACTER SET `utf8mb4`[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE DATABASE `rails_example_development` DEFAULT CHARACTER SET `utf8mb4`[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE DATABASE `rails_example_test` DEFAULT CHARACTER SET `utf8mb4`[0m
+Started GET "/" for 172.17.0.1 at 2022-06-21 04:49:26 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /usr/local/bundle/gems/railties-7.0.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/local/bundle/gems/railties-7.0.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 6.9ms | Allocations: 644)
+Completed 200 OK in 82ms (Views: 28.9ms | ActiveRecord: 0.0ms | Allocations: 5017)
+
+
+  [1m[35m (2.8ms)[0m  [1m[35mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL PRIMARY KEY)[0m
+  [1m[35m (2.7ms)[0m  [1m[35mCREATE TABLE `ar_internal_metadata` (`key` varchar(255) NOT NULL PRIMARY KEY, `value` varchar(255), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT GET_LOCK('5902898923106307780', 0)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreatePosts (20220621050122)
+  [1m[35m (2.9ms)[0m  [1m[35mCREATE TABLE `posts` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `title` varchar(255), `content` text, `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20220621050122')[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.1ms)[0m  [1m[32mINSERT INTO `ar_internal_metadata` (`key`, `value`, `created_at`, `updated_at`) VALUES ('environment', 'development', '2022-06-21 05:01:46.621816', '2022-06-21 05:01:46.621816')[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT RELEASE_LOCK('5902898923106307780')[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Started GET "/posts" for 172.17.0.1 at 2022-06-21 05:05:35 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT `posts`.* FROM `posts`[0m
+  ↳ app/views/posts/index.html.erb:6
+  Rendered posts/index.html.erb within layouts/application (Duration: 6.5ms | Allocations: 1609)
+  Rendered layout layouts/application.html.erb (Duration: 1151.5ms | Allocations: 70563)
+Completed 200 OK in 1192ms (Views: 1158.7ms | ActiveRecord: 0.4ms | Allocations: 74663)
+
+
+Started GET "/admin" for 172.17.0.1 at 2022-06-21 05:08:29 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by Admin::PostsController#index as HTML
+  Rendering layout /usr/local/bundle/gems/administrate-0.17.0/app/views/layouts/administrate/application.html.erb
+  Rendering /usr/local/bundle/gems/administrate-0.17.0/app/views/administrate/application/index.html.erb within layouts/administrate/application
+  Rendered /usr/local/bundle/gems/administrate-0.17.0/app/views/administrate/application/_search.html.erb (Duration: 1.3ms | Allocations: 1324)
+  Rendered /usr/local/bundle/gems/administrate-0.17.0/app/views/administrate/application/_index_header.html.erb (Duration: 321.9ms | Allocations: 15000)
+  Rendered /usr/local/bundle/gems/administrate-0.17.0/app/views/administrate/application/_collection_header_actions.html.erb (Duration: 0.5ms | Allocations: 257)
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` LIMIT 20 OFFSET 0[0m
+  Rendered /usr/local/bundle/gems/administrate-0.17.0/app/views/administrate/application/_collection.html.erb (Duration: 6.8ms | Allocations: 5322)
+  Rendered /usr/local/bundle/gems/administrate-0.17.0/app/views/administrate/application/index.html.erb within layouts/administrate/application (Duration: 338.0ms | Allocations: 22457)
+  Rendered /usr/local/bundle/gems/administrate-0.17.0/app/views/administrate/application/_stylesheet.html.erb (Duration: 2451.0ms | Allocations: 153036)
+  Rendered /usr/local/bundle/gems/administrate-0.17.0/app/views/administrate/application/_icons.html.erb (Duration: 0.3ms | Allocations: 128)
+  Rendered /usr/local/bundle/gems/administrate-0.17.0/app/views/administrate/application/_navigation.html.erb (Duration: 0.8ms | Allocations: 851)
+  Rendered /usr/local/bundle/gems/administrate-0.17.0/app/views/administrate/application/_flashes.html.erb (Duration: 0.4ms | Allocations: 282)
+  Rendered /usr/local/bundle/gems/administrate-0.17.0/app/views/administrate/application/_javascript.html.erb (Duration: 19.9ms | Allocations: 2869)
+  Rendered layout /usr/local/bundle/gems/administrate-0.17.0/app/views/layouts/administrate/application.html.erb (Duration: 2826.6ms | Allocations: 182382)
+Completed 200 OK in 2994ms (Views: 2839.0ms | ActiveRecord: 1.6ms | Allocations: 192138)
+
+
+Started GET "/admin/posts/new" for 172.17.0.1 at 2022-06-21 05:08:35 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Admin::PostsController#new as HTML
+  Rendering layout /usr/local/bundle/gems/administrate-0.17.0/app/views/layouts/administrate/application.html.erb
+  Rendering /usr/local/bundle/gems/administrate-0.17.0/app/views/administrate/application/new.html.erb within layouts/administrate/application
+  Rendered /usr/local/bundle/gems/administrate-0.17.0/app/views/fields/string/_form.html.erb (Duration: 26.4ms | Allocations: 1281)
+  Rendered /usr/local/bundle/gems/administrate-0.17.0/app/views/fields/text/_form.html.erb (Duration: 8.4ms | Allocations: 686)
+  Rendered /usr/local/bundle/gems/administrate-0.17.0/app/views/administrate/application/_form.html.erb (Duration: 39.9ms | Allocations: 3687)
+  Rendered /usr/local/bundle/gems/administrate-0.17.0/app/views/administrate/application/new.html.erb within layouts/administrate/application (Duration: 44.3ms | Allocations: 4596)
+  Rendered /usr/local/bundle/gems/administrate-0.17.0/app/views/administrate/application/_stylesheet.html.erb (Duration: 14.0ms | Allocations: 3075)
+  Rendered /usr/local/bundle/gems/administrate-0.17.0/app/views/administrate/application/_icons.html.erb (Duration: 0.0ms | Allocations: 15)
+  Rendered /usr/local/bundle/gems/administrate-0.17.0/app/views/administrate/application/_navigation.html.erb (Duration: 0.6ms | Allocations: 943)
+  Rendered /usr/local/bundle/gems/administrate-0.17.0/app/views/administrate/application/_flashes.html.erb (Duration: 0.0ms | Allocations: 35)
+  Rendered /usr/local/bundle/gems/administrate-0.17.0/app/views/administrate/application/_javascript.html.erb (Duration: 17.1ms | Allocations: 2579)
+  Rendered layout /usr/local/bundle/gems/administrate-0.17.0/app/views/layouts/administrate/application.html.erb (Duration: 83.8ms | Allocations: 11977)
+Completed 200 OK in 91ms (Views: 88.6ms | ActiveRecord: 0.0ms | Allocations: 12707)
+
+
+Started POST "/admin/posts" for 172.17.0.1 at 2022-06-21 05:09:03 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Admin::PostsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "post"=>{"title"=>"This is my first blog", "content"=>"This is my first blog"}, "commit"=>"Create Post"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPost Create (0.3ms)[0m  [1m[32mINSERT INTO `posts` (`title`, `content`, `created_at`, `updated_at`) VALUES ('This is my first blog', 'This is my first blog', '2022-06-21 05:09:03.542556', '2022-06-21 05:09:03.542556')[0m
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3030/admin/posts/1
+Completed 302 Found in 8ms (ActiveRecord: 1.2ms | Allocations: 4999)
+
+
+Started GET "/admin/posts/1" for 172.17.0.1 at 2022-06-21 05:09:03 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Admin::PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 1 LIMIT 1[0m
+  Rendering layout /usr/local/bundle/gems/administrate-0.17.0/app/views/layouts/administrate/application.html.erb
+  Rendering /usr/local/bundle/gems/administrate-0.17.0/app/views/administrate/application/show.html.erb within layouts/administrate/application
+  Rendered /usr/local/bundle/gems/administrate-0.17.0/app/views/fields/number/_show.html.erb (Duration: 0.4ms | Allocations: 176)
+  Rendered /usr/local/bundle/gems/administrate-0.17.0/app/views/fields/string/_show.html.erb (Duration: 0.8ms | Allocations: 157)
+  Rendered /usr/local/bundle/gems/administrate-0.17.0/app/views/fields/text/_show.html.erb (Duration: 0.6ms | Allocations: 156)
+  Rendered /usr/local/bundle/gems/administrate-0.17.0/app/views/fields/date_time/_show.html.erb (Duration: 0.5ms | Allocations: 306)
+  Rendered /usr/local/bundle/gems/administrate-0.17.0/app/views/fields/date_time/_show.html.erb (Duration: 0.3ms | Allocations: 74)
+  Rendered /usr/local/bundle/gems/administrate-0.17.0/app/views/administrate/application/show.html.erb within layouts/administrate/application (Duration: 17.3ms | Allocations: 3393)
+  Rendered /usr/local/bundle/gems/administrate-0.17.0/app/views/administrate/application/_stylesheet.html.erb (Duration: 16.7ms | Allocations: 3058)
+  Rendered /usr/local/bundle/gems/administrate-0.17.0/app/views/administrate/application/_icons.html.erb (Duration: 0.0ms | Allocations: 15)
+  Rendered /usr/local/bundle/gems/administrate-0.17.0/app/views/administrate/application/_navigation.html.erb (Duration: 0.7ms | Allocations: 639)
+  Rendered /usr/local/bundle/gems/administrate-0.17.0/app/views/administrate/application/_flashes.html.erb (Duration: 0.1ms | Allocations: 45)
+  Rendered /usr/local/bundle/gems/administrate-0.17.0/app/views/administrate/application/_javascript.html.erb (Duration: 19.9ms | Allocations: 2579)
+  Rendered layout /usr/local/bundle/gems/administrate-0.17.0/app/views/layouts/administrate/application.html.erb (Duration: 63.2ms | Allocations: 10705)
+Completed 200 OK in 77ms (Views: 68.3ms | ActiveRecord: 0.5ms | Allocations: 13440)
+
+
+Started GET "/admin/posts" for 172.17.0.1 at 2022-06-21 05:09:09 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Admin::PostsController#index as HTML
+  Rendering layout /usr/local/bundle/gems/administrate-0.17.0/app/views/layouts/administrate/application.html.erb
+  Rendering /usr/local/bundle/gems/administrate-0.17.0/app/views/administrate/application/index.html.erb within layouts/administrate/application
+  Rendered /usr/local/bundle/gems/administrate-0.17.0/app/views/administrate/application/_search.html.erb (Duration: 0.4ms | Allocations: 313)
+  Rendered /usr/local/bundle/gems/administrate-0.17.0/app/views/administrate/application/_index_header.html.erb (Duration: 2.9ms | Allocations: 1268)
+  Rendered /usr/local/bundle/gems/administrate-0.17.0/app/views/administrate/application/_collection_header_actions.html.erb (Duration: 0.2ms | Allocations: 122)
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` LIMIT 20 OFFSET 0[0m
+  Rendered /usr/local/bundle/gems/administrate-0.17.0/app/views/fields/number/_index.html.erb (Duration: 0.6ms | Allocations: 173)
+  Rendered /usr/local/bundle/gems/administrate-0.17.0/app/views/fields/string/_index.html.erb (Duration: 0.3ms | Allocations: 160)
+  Rendered /usr/local/bundle/gems/administrate-0.17.0/app/views/fields/text/_index.html.erb (Duration: 0.4ms | Allocations: 160)
+  Rendered /usr/local/bundle/gems/administrate-0.17.0/app/views/fields/date_time/_index.html.erb (Duration: 0.6ms | Allocations: 234)
+  Rendered /usr/local/bundle/gems/administrate-0.17.0/app/views/administrate/application/_collection_item_actions.html.erb (Duration: 1.3ms | Allocations: 578)
+  Rendered /usr/local/bundle/gems/administrate-0.17.0/app/views/administrate/application/_collection.html.erb (Duration: 24.2ms | Allocations: 5771)
+  Rendered /usr/local/bundle/gems/administrate-0.17.0/app/views/administrate/application/index.html.erb within layouts/administrate/application (Duration: 30.3ms | Allocations: 7413)
+  Rendered /usr/local/bundle/gems/administrate-0.17.0/app/views/administrate/application/_stylesheet.html.erb (Duration: 16.9ms | Allocations: 2967)
+  Rendered /usr/local/bundle/gems/administrate-0.17.0/app/views/administrate/application/_icons.html.erb (Duration: 0.0ms | Allocations: 15)
+  Rendered /usr/local/bundle/gems/administrate-0.17.0/app/views/administrate/application/_navigation.html.erb (Duration: 0.8ms | Allocations: 625)
+  Rendered /usr/local/bundle/gems/administrate-0.17.0/app/views/administrate/application/_flashes.html.erb (Duration: 0.1ms | Allocations: 29)
+  Rendered /usr/local/bundle/gems/administrate-0.17.0/app/views/administrate/application/_javascript.html.erb (Duration: 21.0ms | Allocations: 2577)
+  Rendered layout /usr/local/bundle/gems/administrate-0.17.0/app/views/layouts/administrate/application.html.erb (Duration: 77.3ms | Allocations: 14487)
+Completed 200 OK in 84ms (Views: 80.4ms | ActiveRecord: 0.3ms | Allocations: 15127)
+
+
+Started GET "/admin/posts/1" for 172.17.0.1 at 2022-06-21 05:09:12 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Admin::PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 1 LIMIT 1[0m
+  Rendering layout /usr/local/bundle/gems/administrate-0.17.0/app/views/layouts/administrate/application.html.erb
+  Rendering /usr/local/bundle/gems/administrate-0.17.0/app/views/administrate/application/show.html.erb within layouts/administrate/application
+  Rendered /usr/local/bundle/gems/administrate-0.17.0/app/views/fields/number/_show.html.erb (Duration: 0.0ms | Allocations: 27)
+  Rendered /usr/local/bundle/gems/administrate-0.17.0/app/views/fields/string/_show.html.erb (Duration: 0.0ms | Allocations: 16)
+  Rendered /usr/local/bundle/gems/administrate-0.17.0/app/views/fields/text/_show.html.erb (Duration: 0.1ms | Allocations: 16)
+  Rendered /usr/local/bundle/gems/administrate-0.17.0/app/views/fields/date_time/_show.html.erb (Duration: 0.1ms | Allocations: 74)
+  Rendered /usr/local/bundle/gems/administrate-0.17.0/app/views/fields/date_time/_show.html.erb (Duration: 0.1ms | Allocations: 74)
+  Rendered /usr/local/bundle/gems/administrate-0.17.0/app/views/administrate/application/show.html.erb within layouts/administrate/application (Duration: 5.1ms | Allocations: 1869)
+  Rendered /usr/local/bundle/gems/administrate-0.17.0/app/views/administrate/application/_stylesheet.html.erb (Duration: 18.9ms | Allocations: 2962)
+  Rendered /usr/local/bundle/gems/administrate-0.17.0/app/views/administrate/application/_icons.html.erb (Duration: 0.0ms | Allocations: 15)
+  Rendered /usr/local/bundle/gems/administrate-0.17.0/app/views/administrate/application/_navigation.html.erb (Duration: 0.5ms | Allocations: 631)
+  Rendered /usr/local/bundle/gems/administrate-0.17.0/app/views/administrate/application/_flashes.html.erb (Duration: 0.1ms | Allocations: 29)
+  Rendered /usr/local/bundle/gems/administrate-0.17.0/app/views/administrate/application/_javascript.html.erb (Duration: 14.8ms | Allocations: 2578)
+  Rendered layout /usr/local/bundle/gems/administrate-0.17.0/app/views/layouts/administrate/application.html.erb (Duration: 46.3ms | Allocations: 8947)
+Completed 200 OK in 51ms (Views: 47.9ms | ActiveRecord: 0.3ms | Allocations: 10372)
+
+
+Started GET "/admin/posts/new" for 172.17.0.1 at 2022-06-21 05:09:32 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Admin::PostsController#new as HTML
+  Rendering layout /usr/local/bundle/gems/administrate-0.17.0/app/views/layouts/administrate/application.html.erb
+  Rendering /usr/local/bundle/gems/administrate-0.17.0/app/views/administrate/application/new.html.erb within layouts/administrate/application
+  Rendered /usr/local/bundle/gems/administrate-0.17.0/app/views/fields/string/_form.html.erb (Duration: 0.2ms | Allocations: 240)
+  Rendered /usr/local/bundle/gems/administrate-0.17.0/app/views/fields/text/_form.html.erb (Duration: 0.2ms | Allocations: 226)
+  Rendered /usr/local/bundle/gems/administrate-0.17.0/app/views/administrate/application/_form.html.erb (Duration: 2.8ms | Allocations: 1246)
+  Rendered /usr/local/bundle/gems/administrate-0.17.0/app/views/administrate/application/new.html.erb within layouts/administrate/application (Duration: 4.2ms | Allocations: 1612)
+  Rendered /usr/local/bundle/gems/administrate-0.17.0/app/views/administrate/application/_stylesheet.html.erb (Duration: 15.9ms | Allocations: 2971)
+  Rendered /usr/local/bundle/gems/administrate-0.17.0/app/views/administrate/application/_icons.html.erb (Duration: 0.0ms | Allocations: 15)
+  Rendered /usr/local/bundle/gems/administrate-0.17.0/app/views/administrate/application/_navigation.html.erb (Duration: 0.9ms | Allocations: 920)
+  Rendered /usr/local/bundle/gems/administrate-0.17.0/app/views/administrate/application/_flashes.html.erb (Duration: 0.0ms | Allocations: 29)
+  Rendered /usr/local/bundle/gems/administrate-0.17.0/app/views/administrate/application/_javascript.html.erb (Duration: 20.2ms | Allocations: 2577)
+  Rendered layout /usr/local/bundle/gems/administrate-0.17.0/app/views/layouts/administrate/application.html.erb (Duration: 49.7ms | Allocations: 8833)
+Completed 200 OK in 53ms (Views: 51.5ms | ActiveRecord: 0.0ms | Allocations: 9238)
+
+
+Started GET "/admin/posts" for 172.17.0.1 at 2022-06-21 05:09:34 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Admin::PostsController#index as HTML
+  Rendering layout /usr/local/bundle/gems/administrate-0.17.0/app/views/layouts/administrate/application.html.erb
+  Rendering /usr/local/bundle/gems/administrate-0.17.0/app/views/administrate/application/index.html.erb within layouts/administrate/application
+  Rendered /usr/local/bundle/gems/administrate-0.17.0/app/views/administrate/application/_search.html.erb (Duration: 0.3ms | Allocations: 302)
+  Rendered /usr/local/bundle/gems/administrate-0.17.0/app/views/administrate/application/_index_header.html.erb (Duration: 1.6ms | Allocations: 1252)
+  Rendered /usr/local/bundle/gems/administrate-0.17.0/app/views/administrate/application/_collection_header_actions.html.erb (Duration: 0.1ms | Allocations: 122)
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` LIMIT 20 OFFSET 0[0m
+  Rendered /usr/local/bundle/gems/administrate-0.17.0/app/views/fields/number/_index.html.erb (Duration: 0.0ms | Allocations: 26)
+  Rendered /usr/local/bundle/gems/administrate-0.17.0/app/views/fields/string/_index.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered /usr/local/bundle/gems/administrate-0.17.0/app/views/fields/text/_index.html.erb (Duration: 0.0ms | Allocations: 18)
+  Rendered /usr/local/bundle/gems/administrate-0.17.0/app/views/fields/date_time/_index.html.erb (Duration: 0.1ms | Allocations: 74)
+  Rendered /usr/local/bundle/gems/administrate-0.17.0/app/views/administrate/application/_collection_item_actions.html.erb (Duration: 0.4ms | Allocations: 349)
+  Rendered /usr/local/bundle/gems/administrate-0.17.0/app/views/administrate/application/_collection.html.erb (Duration: 8.7ms | Allocations: 4341)
+  Rendered /usr/local/bundle/gems/administrate-0.17.0/app/views/administrate/application/index.html.erb within layouts/administrate/application (Duration: 12.2ms | Allocations: 5952)
+  Rendered /usr/local/bundle/gems/administrate-0.17.0/app/views/administrate/application/_stylesheet.html.erb (Duration: 13.8ms | Allocations: 2966)
+  Rendered /usr/local/bundle/gems/administrate-0.17.0/app/views/administrate/application/_icons.html.erb (Duration: 0.0ms | Allocations: 15)
+  Rendered /usr/local/bundle/gems/administrate-0.17.0/app/views/administrate/application/_navigation.html.erb (Duration: 0.7ms | Allocations: 625)
+  Rendered /usr/local/bundle/gems/administrate-0.17.0/app/views/administrate/application/_flashes.html.erb (Duration: 0.1ms | Allocations: 29)
+  Rendered /usr/local/bundle/gems/administrate-0.17.0/app/views/administrate/application/_javascript.html.erb (Duration: 17.9ms | Allocations: 2578)
+  Rendered layout /usr/local/bundle/gems/administrate-0.17.0/app/views/layouts/administrate/application.html.erb (Duration: 52.2ms | Allocations: 13040)
+Completed 200 OK in 55ms (Views: 53.3ms | ActiveRecord: 0.3ms | Allocations: 13633)
+
+
+Started GET "/posts" for 172.17.0.1 at 2022-06-21 05:09:38 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT `posts`.* FROM `posts`[0m
+  ↳ app/views/posts/index.html.erb:6
+  Rendered posts/_post.html.erb (Duration: 2.8ms | Allocations: 234)
+  Rendered posts/index.html.erb within layouts/application (Duration: 19.7ms | Allocations: 2038)
+  Rendered layout layouts/application.html.erb (Duration: 34.3ms | Allocations: 3451)
+Completed 200 OK in 39ms (Views: 36.8ms | ActiveRecord: 0.3ms | Allocations: 4509)
+
+
+Started GET "/admin/posts/new" for 172.17.0.1 at 2022-06-21 06:20:38 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Admin::PostsController#new as HTML
+  Rendering layout /usr/local/bundle/gems/administrate-0.17.0/app/views/layouts/administrate/application.html.erb
+  Rendering /usr/local/bundle/gems/administrate-0.17.0/app/views/administrate/application/new.html.erb within layouts/administrate/application
+  Rendered /usr/local/bundle/gems/administrate-0.17.0/app/views/fields/string/_form.html.erb (Duration: 0.2ms | Allocations: 245)
+  Rendered /usr/local/bundle/gems/administrate-0.17.0/app/views/fields/text/_form.html.erb (Duration: 0.3ms | Allocations: 226)
+  Rendered /usr/local/bundle/gems/administrate-0.17.0/app/views/administrate/application/_form.html.erb (Duration: 3.5ms | Allocations: 1298)
+  Rendered /usr/local/bundle/gems/administrate-0.17.0/app/views/administrate/application/new.html.erb within layouts/administrate/application (Duration: 5.0ms | Allocations: 1709)
+  Rendered /usr/local/bundle/gems/administrate-0.17.0/app/views/administrate/application/_stylesheet.html.erb (Duration: 22.9ms | Allocations: 2974)
+  Rendered /usr/local/bundle/gems/administrate-0.17.0/app/views/administrate/application/_icons.html.erb (Duration: 0.0ms | Allocations: 15)
+  Rendered /usr/local/bundle/gems/administrate-0.17.0/app/views/administrate/application/_navigation.html.erb (Duration: 0.7ms | Allocations: 926)
+  Rendered /usr/local/bundle/gems/administrate-0.17.0/app/views/administrate/application/_flashes.html.erb (Duration: 0.0ms | Allocations: 34)
+  Rendered /usr/local/bundle/gems/administrate-0.17.0/app/views/administrate/application/_javascript.html.erb (Duration: 16.6ms | Allocations: 2580)
+  Rendered layout /usr/local/bundle/gems/administrate-0.17.0/app/views/layouts/administrate/application.html.erb (Duration: 51.1ms | Allocations: 8951)
+Completed 200 OK in 57ms (Views: 54.2ms | Allocations: 9399)
+
+
+Started POST "/admin/posts" for 172.17.0.1 at 2022-06-21 06:20:50 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Admin::PostsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "post"=>{"title"=>"Second blog", "content"=>"Second blog"}, "commit"=>"Create Post"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPost Create (0.5ms)[0m  [1m[32mINSERT INTO `posts` (`title`, `content`, `created_at`, `updated_at`) VALUES ('Second blog', 'Second blog', '2022-06-21 06:20:50.390424', '2022-06-21 06:20:50.390424')[0m
+  [1m[36mTRANSACTION (2.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3030/admin/posts/2
+Completed 302 Found in 19ms (ActiveRecord: 3.1ms | Allocations: 3801)
+
+
+Started GET "/admin/posts/2" for 172.17.0.1 at 2022-06-21 06:20:50 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Admin::PostsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 2 LIMIT 1[0m
+  Rendering layout /usr/local/bundle/gems/administrate-0.17.0/app/views/layouts/administrate/application.html.erb
+  Rendering /usr/local/bundle/gems/administrate-0.17.0/app/views/administrate/application/show.html.erb within layouts/administrate/application
+  Rendered /usr/local/bundle/gems/administrate-0.17.0/app/views/fields/number/_show.html.erb (Duration: 0.0ms | Allocations: 27)
+  Rendered /usr/local/bundle/gems/administrate-0.17.0/app/views/fields/string/_show.html.erb (Duration: 0.1ms | Allocations: 16)
+  Rendered /usr/local/bundle/gems/administrate-0.17.0/app/views/fields/text/_show.html.erb (Duration: 0.0ms | Allocations: 16)
+  Rendered /usr/local/bundle/gems/administrate-0.17.0/app/views/fields/date_time/_show.html.erb (Duration: 0.1ms | Allocations: 81)
+  Rendered /usr/local/bundle/gems/administrate-0.17.0/app/views/fields/date_time/_show.html.erb (Duration: 0.1ms | Allocations: 74)
+  Rendered /usr/local/bundle/gems/administrate-0.17.0/app/views/administrate/application/show.html.erb within layouts/administrate/application (Duration: 6.1ms | Allocations: 1879)
+  Rendered /usr/local/bundle/gems/administrate-0.17.0/app/views/administrate/application/_stylesheet.html.erb (Duration: 14.0ms | Allocations: 2963)
+  Rendered /usr/local/bundle/gems/administrate-0.17.0/app/views/administrate/application/_icons.html.erb (Duration: 0.0ms | Allocations: 15)
+  Rendered /usr/local/bundle/gems/administrate-0.17.0/app/views/administrate/application/_navigation.html.erb (Duration: 0.5ms | Allocations: 630)
+  Rendered /usr/local/bundle/gems/administrate-0.17.0/app/views/administrate/application/_flashes.html.erb (Duration: 0.1ms | Allocations: 37)
+  Rendered /usr/local/bundle/gems/administrate-0.17.0/app/views/administrate/application/_javascript.html.erb (Duration: 17.1ms | Allocations: 2577)
+  Rendered layout /usr/local/bundle/gems/administrate-0.17.0/app/views/layouts/administrate/application.html.erb (Duration: 44.8ms | Allocations: 8996)
+Completed 200 OK in 51ms (Views: 46.7ms | ActiveRecord: 0.5ms | Allocations: 10452)
+
+
+Started GET "/admin/posts" for 172.17.0.1 at 2022-06-21 06:20:52 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Admin::PostsController#index as HTML
+  Rendering layout /usr/local/bundle/gems/administrate-0.17.0/app/views/layouts/administrate/application.html.erb
+  Rendering /usr/local/bundle/gems/administrate-0.17.0/app/views/administrate/application/index.html.erb within layouts/administrate/application
+  Rendered /usr/local/bundle/gems/administrate-0.17.0/app/views/administrate/application/_search.html.erb (Duration: 0.3ms | Allocations: 306)
+  Rendered /usr/local/bundle/gems/administrate-0.17.0/app/views/administrate/application/_index_header.html.erb (Duration: 2.3ms | Allocations: 1256)
+  Rendered /usr/local/bundle/gems/administrate-0.17.0/app/views/administrate/application/_collection_header_actions.html.erb (Duration: 0.2ms | Allocations: 122)
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` LIMIT 20 OFFSET 0[0m
+  Rendered /usr/local/bundle/gems/administrate-0.17.0/app/views/fields/number/_index.html.erb (Duration: 0.0ms | Allocations: 26)
+  Rendered /usr/local/bundle/gems/administrate-0.17.0/app/views/fields/string/_index.html.erb (Duration: 0.0ms | Allocations: 18)
+  Rendered /usr/local/bundle/gems/administrate-0.17.0/app/views/fields/text/_index.html.erb (Duration: 0.0ms | Allocations: 18)
+  Rendered /usr/local/bundle/gems/administrate-0.17.0/app/views/fields/date_time/_index.html.erb (Duration: 0.2ms | Allocations: 74)
+  Rendered /usr/local/bundle/gems/administrate-0.17.0/app/views/administrate/application/_collection_item_actions.html.erb (Duration: 0.4ms | Allocations: 350)
+  Rendered /usr/local/bundle/gems/administrate-0.17.0/app/views/fields/number/_index.html.erb (Duration: 0.1ms | Allocations: 26)
+  Rendered /usr/local/bundle/gems/administrate-0.17.0/app/views/fields/string/_index.html.erb (Duration: 0.0ms | Allocations: 18)
+  Rendered /usr/local/bundle/gems/administrate-0.17.0/app/views/fields/text/_index.html.erb (Duration: 0.0ms | Allocations: 18)
+  Rendered /usr/local/bundle/gems/administrate-0.17.0/app/views/fields/date_time/_index.html.erb (Duration: 0.1ms | Allocations: 74)
+  Rendered /usr/local/bundle/gems/administrate-0.17.0/app/views/administrate/application/_collection_item_actions.html.erb (Duration: 0.4ms | Allocations: 349)
+  Rendered /usr/local/bundle/gems/administrate-0.17.0/app/views/administrate/application/_collection.html.erb (Duration: 15.1ms | Allocations: 5487)
+  Rendered /usr/local/bundle/gems/administrate-0.17.0/app/views/administrate/application/index.html.erb within layouts/administrate/application (Duration: 19.9ms | Allocations: 7115)
+  Rendered /usr/local/bundle/gems/administrate-0.17.0/app/views/administrate/application/_stylesheet.html.erb (Duration: 15.7ms | Allocations: 2962)
+  Rendered /usr/local/bundle/gems/administrate-0.17.0/app/views/administrate/application/_icons.html.erb (Duration: 0.0ms | Allocations: 15)
+  Rendered /usr/local/bundle/gems/administrate-0.17.0/app/views/administrate/application/_navigation.html.erb (Duration: 3.8ms | Allocations: 626)
+  Rendered /usr/local/bundle/gems/administrate-0.17.0/app/views/administrate/application/_flashes.html.erb (Duration: 0.1ms | Allocations: 29)
+  Rendered /usr/local/bundle/gems/administrate-0.17.0/app/views/administrate/application/_javascript.html.erb (Duration: 17.4ms | Allocations: 2585)
+  Rendered layout /usr/local/bundle/gems/administrate-0.17.0/app/views/layouts/administrate/application.html.erb (Duration: 63.6ms | Allocations: 14189)
+Completed 200 OK in 67ms (Views: 64.7ms | ActiveRecord: 0.4ms | Allocations: 14795)
+
+
+Started GET "/posts" for 172.17.0.1 at 2022-06-21 06:20:56 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT `posts`.* FROM `posts`[0m
+  ↳ app/views/posts/index.html.erb:6
+  Rendered posts/_post.html.erb (Duration: 0.1ms | Allocations: 26)
+  Rendered posts/_post.html.erb (Duration: 0.2ms | Allocations: 25)
+  Rendered posts/index.html.erb within layouts/application (Duration: 4.5ms | Allocations: 1103)
+  Rendered layout layouts/application.html.erb (Duration: 18.7ms | Allocations: 2154)
+Completed 200 OK in 22ms (Views: 19.7ms | ActiveRecord: 0.2ms | Allocations: 2431)
+
+
+Started GET "/posts/1" for 172.17.0.1 at 2022-06-21 06:21:00 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:63:in `set_post'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/_post.html.erb (Duration: 0.0ms | Allocations: 26)
+  Rendered posts/show.html.erb within layouts/application (Duration: 3.3ms | Allocations: 793)
+  Rendered layout layouts/application.html.erb (Duration: 14.5ms | Allocations: 1832)
+Completed 200 OK in 23ms (Views: 18.1ms | ActiveRecord: 0.3ms | Allocations: 3348)
+
+
+Started GET "/posts" for 172.17.0.1 at 2022-06-21 06:21:03 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT `posts`.* FROM `posts`[0m
+  ↳ app/views/posts/index.html.erb:6
+  Rendered posts/_post.html.erb (Duration: 0.1ms | Allocations: 26)
+  Rendered posts/_post.html.erb (Duration: 0.1ms | Allocations: 25)
+  Rendered posts/index.html.erb within layouts/application (Duration: 9.2ms | Allocations: 1115)
+  Rendered layout layouts/application.html.erb (Duration: 40.9ms | Allocations: 2162)
+Completed 200 OK in 46ms (Views: 43.0ms | ActiveRecord: 0.4ms | Allocations: 2438)
+
+
+Started GET "/posts" for 172.17.0.1 at 2022-06-21 15:30:28 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT `posts`.* FROM `posts`[0m
+  ↳ app/views/posts/index.html.erb:6
+  Rendered posts/_post.html.erb (Duration: 0.1ms | Allocations: 26)
+  Rendered posts/_post.html.erb (Duration: 0.0ms | Allocations: 25)
+  Rendered posts/index.html.erb within layouts/application (Duration: 7.0ms | Allocations: 1223)
+  Rendered layout layouts/application.html.erb (Duration: 25.8ms | Allocations: 2274)
+Completed 200 OK in 30ms (Views: 27.6ms | ActiveRecord: 0.8ms | Allocations: 2548)
+
+
+Started GET "/posts" for 172.17.0.1 at 2022-06-21 15:30:30 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT `posts`.* FROM `posts`[0m
+  ↳ app/views/posts/index.html.erb:6
+  Rendered posts/_post.html.erb (Duration: 0.1ms | Allocations: 26)
+  Rendered posts/_post.html.erb (Duration: 0.1ms | Allocations: 25)
+  Rendered posts/index.html.erb within layouts/application (Duration: 8.0ms | Allocations: 1117)
+  Rendered layout layouts/application.html.erb (Duration: 27.1ms | Allocations: 2164)
+Completed 200 OK in 33ms (Views: 29.1ms | ActiveRecord: 0.6ms | Allocations: 2439)
+
+
